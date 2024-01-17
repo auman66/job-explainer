@@ -65,7 +65,7 @@ if st.button('Enter'):
   twiml = f"<Response><Say voice='Polly.Ruth-Neural' language='en-US'>{story}</Say></Response>"
   call = twilioClient.calls.create(
     twiml=twiml,
-    to=os.environ['MY_PHONE'],
+    to=phone_input,
     from_=os.environ['TWILIO_PHONE']
   )
 
